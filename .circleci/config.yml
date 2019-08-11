@@ -1,0 +1,5 @@
+version: 2
+jobs:
+  build:
+    parallelizm: 3
+    working_directory: ~/codebreaker
