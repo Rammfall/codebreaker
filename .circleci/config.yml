@@ -1,5 +1,7 @@
 version: 2
 jobs:
   build:
-    parallelizm: 3
+    parallelism: 3
     working_directory: ~/codebreaker
+    steps:
+      - checkout

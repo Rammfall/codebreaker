@@ -1,19 +1,11 @@
-require_relative '../codebreaker/lib/codebreaker'
-
-matrix = [
-  %w[6543 5643 ++--],
-  %w[6543 6411 +-],
-  %w[6543 6544 +++],
-  %w[6543 3456 ----],
-  %w[6543 6666 +],
-  %w[6543 2666 -],
-  %w[6543 2222],
-  %w[6666 1661 ++],
-  %w[1234 3124 +---],
-  %w[1234 1524 ++-],
-  %w[1234 1234 ++++]
-]
+require_relative 'spec_helper'
 
 RSpec.describe Codebreaker do
+  it "has a version number" do
+    expect(Codebreaker::VERSION).not_to be nil
+  end
 
+  it "does something useful" do
+    expect(false).to eq(false)
+  end
 end
