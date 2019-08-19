@@ -17,21 +17,11 @@ RSpec.describe Codebreaker::Checker do
     ]
   end
 
-  let(:false_matrix) do
-    %w[124214 7543 fsfs]
-  end
+  it 'Matrix should be return right answer' do
+    true_matrix.map do |elem|
+      result = Codebreaker::Checker.new(elem[0], elem[1])
 
-  it 'Validation shouldnt approve this' do
-    false_matrix.map do |code|
-      expect {Codebreaker::Checker.new('1212', code)}.to raise_error(ArgumentError)
+      expect(result.match).to eq(elem[2])
     end
   end
-
-  # it 'Matrix should be return right answer' do
-  #   true_matrix.map do |elem|
-  #     result = Codebreaker::Checker.new(elem[0], elem[1])
-  #
-  #     expect(result).to eq(elem[2])
-  #   end
-  # end
 end

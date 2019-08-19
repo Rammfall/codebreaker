@@ -11,7 +11,7 @@ module Codebreaker
   SYMBOLS = {
     positive: '+',
     negative: '-'
-  }.freeze
+  }
 
   DIFFICULT = {
     easy: {
